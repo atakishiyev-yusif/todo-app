@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/list-task.svg">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css"/>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <title>Todo App</title>
+</head>
+<body>
+<div class="todo-header">
+    <div class="container">
+        <div class="todo-title dp-flex align-center justify-between">
+            <h1>Todo</h1>
+            <div class="theme-icon">
+                <img id="sunIcon" src="./images/icon-moon.svg" alt="icon-moon">
+                <img id="moonIcon" src="./images/icon-sun.svg" alt="sun-icon">
+            </div>
+        </div>
+
+        <form action="#" id="todoForm" class="dp-flex">
+            <input type="text" id="todoInput" placeholder="Create a new todo.."/>
+            <a href="#" id = "addButton">+</a>
+        </form>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="todos">
+        <ul id="incompleteList"></ul>
+
+        <ul id="completedList"></ul>
+    </ul>
+
+    <div class="todos-filter dp-flex align-center justify-between">
+        <a style="font-weight: 400;" href="#"><span class="items-length">0</span> items left</a>
+
+        <div class="dp-flex align-center gap-24">
+            <a class="active" id="filterAll" href="#">All</a>
+            <a id="filterActive" href="#">Active</a>
+            <a id="filterCompleted" href="#">Completed</a>
+        </div>
+
+        <div class="dp-flex align-center gap-24">
+            <a href="#" id="clearCompleted">
+                <i class="bi bi-check2-square"></i>
+                Clear Completed
+            </a>
+
+            <a href="#" id="clearAll">
+                <i class="bi bi-trash3"></i>
+                Clear All
+            </a>
+        </div>
+    </div>
+</div>
+<script src="./js/script.js"></script>
+</body>
+</html>
