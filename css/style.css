@@ -262,12 +262,11 @@ body.dark .todo-header{
     .todos-filter{
         flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
     }
 
     .todo-filter a{
         margin: 16px;
-        padding: 6px;
+        padding: 10px;
     }
     
     .todo-item .icon-cross{
