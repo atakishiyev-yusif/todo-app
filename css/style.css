@@ -241,7 +241,7 @@ body.dark .todo-header{
     }
     
     .todo-item .icon-cross{
-    opacity: 1;
+        opacity: 1;
     }
     
     .todo-filter a{
@@ -260,9 +260,9 @@ body.dark .todo-header{
     }
 
     .todos-filter{
-        font-size: 14px;
         flex-wrap: wrap;
         align-items: center;
+        justify-content: center;
     }
 
     .todo-filter a{
@@ -270,7 +270,7 @@ body.dark .todo-header{
     }
     
     .todo-item .icon-cross{
-    opacity: 1;
+        opacity: 1;
     }
 
 }
