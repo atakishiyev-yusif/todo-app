@@ -239,8 +239,13 @@ body.dark .todo-header{
     .container{
         width: 70%;
     }
+    
     .todo-item .icon-cross{
     opacity: 1;
+    }
+    
+    .todo-filter a{
+        margin: 16px;
     }
 }
 
@@ -255,13 +260,13 @@ body.dark .todo-header{
     }
 
     .todos-filter{
-        font-size: 10px;
+        font-size: 14px;
         flex-wrap: wrap;
         align-items: center;
     }
 
     .todo-filter a{
-        margin: 15px;
+        margin: 16px;
     }
     
     .todo-item .icon-cross{
