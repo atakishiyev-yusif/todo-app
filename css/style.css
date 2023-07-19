@@ -239,6 +239,9 @@ body.dark .todo-header{
     .container{
         width: 70%;
     }
+    .todo-item .icon-cross{
+    opacity: 1;
+    }
 }
 
 @media(max-width: 900px) {
@@ -258,7 +261,11 @@ body.dark .todo-header{
     }
 
     .todo-filter a{
-        margin: 12px;
+        margin: 13px;
+    }
+    
+    .todo-item .icon-cross{
+    opacity: 1;
     }
 
 }
