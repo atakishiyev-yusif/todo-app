@@ -265,8 +265,7 @@ body.dark .todo-header{
     }
 
     .todo-filter a{
-        margin: 16px;
-        padding: 10px;
+        padding: 16px;
     }
     
     .todo-item .icon-cross{
