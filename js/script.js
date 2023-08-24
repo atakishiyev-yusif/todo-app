@@ -15,6 +15,30 @@ const filterCompleted = document.querySelector('#filterCompleted');
 
 todos.classList.add('opacity-none');
 
+
+// open modal by id
+function openModal(id) {
+    document.getElementById(id).classList.add('open');
+    document.body.classList.add('modal-open');
+}
+
+// close currently open modal
+function closeModal() {
+    document.querySelector('.modal.open').classList.remove('open');
+    document.body.classList.remove('modal-open');
+}
+
+window.addEventListener('load', function() {
+    // close modals on background click
+    document.addEventListener('click', event => {
+        if (event.target.classList.contains('modal')) {
+            closeModal();
+        }
+    });
+});
+
+
+/* Change Dark/Light theme */
 const changeTheme = () => {
     moonIcon.classList.add('dp-none');
 
@@ -32,6 +56,7 @@ const changeTheme = () => {
 }
 changeTheme()
 
+/* Todos Filter. (Active, Completed) */
 const filter = () =>{
     filterAll.addEventListener('click', ()=>{
         filterAll.classList.add('active');
@@ -83,10 +108,10 @@ const deleteItem = (delElement) => {
     delElement.addEventListener('click', (e) =>{
         e.currentTarget.parentElement.remove();
         itemsLength.innerText = incompleteList.children.length;
-
     })
 }
 
+/* Render Todo */
 const renderTodoItem = (todoText) => {
 
     todos.classList.remove('opacity-none')
@@ -140,6 +165,7 @@ const renderTodoItem = (todoText) => {
     todoInput.focus();
 }
 
+/* Add Todo */
 const addTodo = () => {
     if (todoInput.value === '') {
         console.log('Boş giriş.');
@@ -148,6 +174,7 @@ const addTodo = () => {
     }
 };
 
+/* Add todo with ENTER key */
 todoInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
         addTodo();
@@ -155,5 +182,5 @@ todoInput.addEventListener('keydown', (e) => {
 });
 
 
-addButton.addEventListener('click', addTodo);
 
+addButton.addEventListener('click', addTodo);

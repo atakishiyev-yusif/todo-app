@@ -13,6 +13,33 @@
     <title>Todo App</title>
 </head>
 <body>
+    <!-- Modal -->
+    <div>
+        <div>
+            <a onclick="openModal('modal-1')" class="how-to-use dp-flex align-center justify-center"> <i class="bi bi-question-circle"></i> <span>How to use</span> </a>
+        </div>
+
+        <div id="modal-1" class="modal">
+            <div class="modal-body">
+                <h2 style="font-size: 18px; margin-top: 22px">How to use😶‍🌫️</h2>
+                <p
+                style="
+                font-size: 38px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 90%;
+                font-weight: 500
+                "
+                >
+                Coming Soon... 🚀</p>
+                <button onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Todo header -->
 <div class="todo-header">
     <div class="container">
         <div class="todo-title dp-flex align-center justify-between">
@@ -31,12 +58,13 @@
 </div>
 
 <div class="container">
+    <!-- Todos -->
     <ul class="todos">
         <ul id="incompleteList"></ul>
 
         <ul id="completedList"></ul>
     </ul>
-
+    <!-- Todos filter -->
     <div class="todos-filter dp-flex align-center justify-between">
         <a style="font-weight: 400;" href="#"><span class="items-length">0</span> items left</a>
 
@@ -58,6 +86,9 @@
             </a>
         </div>
     </div>
+
+
+
 </div>
 <script src="./js/script.js"></script>
 </body>

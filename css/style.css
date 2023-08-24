@@ -239,11 +239,11 @@ body.dark .todo-header{
     .container{
         width: 70%;
     }
-    
+
     .todo-item .icon-cross{
         opacity: 1;
     }
-    
+
     .todo-filter a{
         margin: 16px;
     }
@@ -267,9 +267,87 @@ body.dark .todo-header{
     .todo-filter a{
         padding: 16px;
     }
-    
+
     .todo-item .icon-cross{
         opacity: 1;
     }
 
+}
+
+
+.modal {
+    /* modals are hidden by default */
+    display: none;
+
+    /* modal container fixed across whole screen */
+    position: fixed;
+    inset: 0;
+
+    /* z-index must be higher than everything else on the page */
+    z-index: 10000;
+
+    /* semi-transparent black background exposed by padding */
+    background-color: rgba(0, 0, 0, .75);
+    padding: 40px;
+
+    /* enables scrolling for tall modals */
+    overflow: hidden;
+}
+
+.modal.open {
+    display: block;
+}
+
+.modal-body {
+    padding: 20px;
+    background: #fff;
+    overflow: auto;
+}
+
+body.modal-open {
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+}
+
+.modal-body{
+    width: 720px;
+    height: 430px;
+    margin: 0 auto;
+    transform: translateY(25%);
+    background: var(--body-bg);
+    color: var(--text-color-1);
+    overflow: hidden;
+}
+
+.how-to-use{
+    position: absolute;
+    bottom: 0;
+    padding: 12px;
+    margin-bottom: 12px;
+    color: var(--text-color-1);
+    font-weight: 600;
+}
+
+.how-to-use span{
+    opacity: 0;
+    transition: 1s;
+    text-transform: uppercase;
+}
+
+.how-to-use:hover span{
+    opacity: 1;
+}
+
+.how-to-use:hover .bi-question-circle{
+    transform: translateX(100%);
+    transition: 1s;
+    position: absolute;
+    right: 0;
+}
+
+.bi-question-circle{
+    font-size: 32px;
+    color: red;
+    transition: 1s;
+    z-index: 999;
 }
